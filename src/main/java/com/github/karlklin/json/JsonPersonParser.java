@@ -4,18 +4,19 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.karlklin.Person;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-public class SimpleExample {
+public class JsonPersonParser {
 
     private ObjectMapper mapper = new ObjectMapper();
 
-    public SimplePerson toPojo(File simpleJsonFile) {
+    public Person toPojo(File simpleJsonFile) {
         try {
-            return mapper.readValue(simpleJsonFile, SimplePerson.class);
+            return mapper.readValue(simpleJsonFile, Person.class);
         } catch (JsonParseException e) {
             throw new RuntimeException(e);
         } catch (JsonMappingException e) {
@@ -33,7 +34,7 @@ public class SimpleExample {
         }
     }
 
-    public String toJson(SimplePerson person) {
+    public String toJson(Person person) {
         try {
             return mapper.writeValueAsString(person);
         } catch (JsonProcessingException e) {
