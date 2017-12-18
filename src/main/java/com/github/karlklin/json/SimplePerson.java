@@ -1,4 +1,4 @@
-package com.github.karlklin.json.simple;
+package com.github.karlklin.json;
 
 public class SimplePerson {
 

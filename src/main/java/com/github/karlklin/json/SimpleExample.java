@@ -1,4 +1,4 @@
-package com.github.karlklin.json.simple;
+package com.github.karlklin.json;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -1,4 +1,4 @@
-package com.github.karlklin.json.simple;
+package com.github.karlklin.json;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
